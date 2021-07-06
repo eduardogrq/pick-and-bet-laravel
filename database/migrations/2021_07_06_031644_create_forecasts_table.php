@@ -15,6 +15,11 @@ class CreateForecastsTable extends Migration
     {
         Schema::create('forecasts', function (Blueprint $table) {
             $table->id();
+            $table->date('event_date');
+            $table->string('event_name');
+            $table->string('forecast');
+            $table->string('category');
+            $table->boolean('premium');
             $table->timestamps();
         });
     }
