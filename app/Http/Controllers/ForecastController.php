@@ -13,7 +13,7 @@ class ForecastController extends Controller
      */
     public function index()
     {
-        //
+        return view('forecasts.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ForecastController extends Controller
      */
     public function create()
     {
-        //
+        return view('forecasts.create');
     }
 
     /**

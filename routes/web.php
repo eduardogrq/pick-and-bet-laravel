@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\ForecastController;
+use App\Http\Controllers\ForecastController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('forecast', 'ForecastController');
+// All CRUD Methods
+Route::resource('forecasts', ForecastController::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
