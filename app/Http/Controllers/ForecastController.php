@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ForecastController extends Controller
 {
+
+    public function welcome(){
+
+        $users = User::all()->take(7);
+        return view('welcomePick')->with('users', $users);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -13,12 +13,14 @@ use App\Http\Controllers\ForecastController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Forecasts
 
-// All CRUD Methods
-Route::resource('forecasts', ForecastController::class);
+    Route::get('/', [ForecastController::class, 'welcome'])->name('welcome');
+
+    // All CRUD Methods
+    Route::resource('forecasts', ForecastController::class);
+
+//END FORECASTS
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
