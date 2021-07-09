@@ -22,7 +22,7 @@ class ForecastFactory extends Factory
     public function definition()
     {
         return [
-            'event_name' => $this->faker->sentence(),
+            'event_name' => $this->faker->sentence(2),
             'event_date' => now(),
             'forecast' => $this->faker->word(),
             'category' => $this->faker->word(),

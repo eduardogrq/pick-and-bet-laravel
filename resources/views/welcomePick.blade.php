@@ -46,6 +46,7 @@
                         <table class="table table-bg">
                             <thead>
                                 <tr>
+                                    <th scope="col">Fecha</th>
                                     <th scope="col">Evento</th>
                                     <th scope="col">Pronóstico</th>
                                 </tr>
@@ -53,10 +54,11 @@
                             <tbody>
 
 {{--                            // Printing forecasts--}}
-                            @foreach($users as $user)
+                            @foreach($forecasts as $forecast)
                                 <tr>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->lastName}}</td>
+                                    <td>{{$forecast->event_date}}</td>
+                                    <td>{{$forecast->event_name}}</td>
+                                    <td>{{$forecast->forecast}}</td>
                                 </tr>
 
 

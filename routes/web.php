@@ -17,6 +17,10 @@ use App\Http\Controllers\ForecastController;
 
     Route::get('/', [ForecastController::class, 'welcome'])->name('welcome');
 
+    Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks');
+
+    Route::get('/premium-picks', [ForecastController::class, 'premiumPicks'])->name('premiumPicks');
+
     // All CRUD Methods
     Route::resource('forecasts', ForecastController::class);
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Forecast;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,28 @@ class ForecastController extends Controller
 
     public function welcome(){
 
-        $users = User::all()->take(7);
-        return view('welcomePick')->with('users', $users);
+        $forecasts = Forecast::all()->take(7);
+        return view('welcomePick')->with('forecasts', $forecasts);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function freePicks(){
+        return view('forecasts.freePicks');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function premiumPicks(){
+        return view('forecasts.premiumPicks');
+    }
+
     /**
      * Display a listing of the resource.
      *
