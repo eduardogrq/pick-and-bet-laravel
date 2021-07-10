@@ -111,8 +111,8 @@
                         <img src="./img/guantes-artes-marciales.png" alt="Guantes">
                     </div>
                     <div class="contenedor-botones">
-                        <button class="btn btn-primary">Regístrate Ahora</button>
-                        <button class="btn btn-outline-primary">Ver Nuestros Picks</button>
+                        <a class="btn btn-primary" href="{{route('register')}}">Regístrate Ahora</a>
+                        <a class="btn btn-outline-primary" href="{{route('freePicks')}}">Ver Nuestros Picks</a>
                     </div>
                     <p class="small-text">Este no es un sitio de apuestas deportivas. Nosotros proporcionamos datos que sirven de asesoría solamente. No recomendable para menores de 18 años.</p>
                 </div>
