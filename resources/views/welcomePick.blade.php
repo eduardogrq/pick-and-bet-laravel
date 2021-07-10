@@ -17,7 +17,7 @@
                             <h1>Con Nosotros <br> ¡Apuesta y Gana!</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <div class="overlay-btn">
-                                <button class="btn btn-primary">Ver Nuestros Picks</button>
+                                <a href="{{route('freePicks')}}"><button class="btn btn-primary">Ver Nuestros Picks</button></a>
                             </div>
                             <p class="small-text">Este no es un sitio de apuestas deportivas. Nosotros proporcionamos datos que sirven de asesoría solamente. No recomendable para menores de 18 años.</p>
                         </div>
@@ -67,7 +67,9 @@
                         </table>
                     </div>
                     <div class="container-btn-picks-gratuitos">
-                        <button class="btn btn-primary">Ver Todos</button>
+                        <a href="{{route('freePicks')}}">
+                            <button class="btn btn-primary">Ver Todos</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -85,7 +87,9 @@
                         <h2>Obtén Acceso Ilimitado a Nuestros <span>Picks Premium</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div class="container-btn">
-                            <button class="btn btn-primary">Acceder</button>
+                            <a href="">
+                                <button class="btn btn-primary">Acceder</button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-12 col-md-5">

@@ -15,7 +15,7 @@
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('welcome')}}">
                 <img src="./img/pick&bet-logotipo-inverted.png" alt="Logo Pick&Bet">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Premium Picks</a>
+                        <a class="nav-link" href="{{route('premiumPicks')}}">Premium Picks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Picks Gratuitos</a>
+                        <a class="nav-link" href="{{route('freePicks')}}">Picks Gratuitos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Log in</a>
+                        <a class="nav-link" href="{{route('login')}}">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link platzi-text" href="#">Regístrate</a>
+                        <a class="nav-link platzi-text" href="{{route('register')}}">Regístrate</a>
                     </li>
                 </ul>
             </div>
@@ -66,11 +66,11 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="contendor-links-footer">
-                            <a href="#">Home</a>
-                            <a href="#">Premium Picks</a>
-                            <a href="#">Free Picks</a>
-                            <a href="#">Log in</a>
-                            <a href="#">Regístrate</a>
+                            <a href="{{route('welcome')}}">Home</a>
+                            <a href="{{route('premiumPicks')}}">Premium Picks</a>
+                            <a href="{{route('freePicks')}}">Free Picks</a>
+                            <a href="{{route('login')}}">Log in</a>
+                            <a href="{{route('register')}}">Regístrate</a>
                             <a href="#">Aviso de Seguridad</a>
                         </div>
                     </div>
@@ -80,10 +80,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p class="copy">Copyright &copy; 2021 PCIK&BET</p>
+                            <p class="copy">Copyright &copy; 2021 PICK&BET</p>
                         </div>
                         <div class="col-12 col-md-6">
-                            <p class="smartbis">Desarrollado por Smartbis</p>
+                            <p class="smartbis">Desarrollado por <a href="https://smartbis.com.mx/" style="text-decoration: none" target="_blank">Smartbis</a></p>
                         </div>
                     </div>
                 </div>
@@ -91,8 +91,6 @@
         </footer>
     </main>
 
-{{--<script src="./js/jquery-3.5.1.min.js"></script>--}}
-{{--<script src="./js/bootstrap.min.js"></script>--}}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

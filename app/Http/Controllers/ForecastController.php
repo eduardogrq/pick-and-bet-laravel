@@ -33,6 +33,10 @@ class ForecastController extends Controller
         return view('forecasts.premiumPicks');
     }
 
+    public function premiumRegister(){
+        return view('forecasts.premiumRegister');
+    }
+
     /**
      * Display a listing of the resource.
      *

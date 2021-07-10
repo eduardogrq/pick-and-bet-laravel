@@ -19,6 +19,8 @@ use App\Http\Controllers\ForecastController;
 
     Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks');
 
+    Route::get('/premium-register', [ForecastController::class, 'premiumRegister'])->name('premiumRegister');
+
     Route::get('/premium-picks', [ForecastController::class, 'premiumPicks'])->name('premiumPicks');
 
     // All CRUD Methods
