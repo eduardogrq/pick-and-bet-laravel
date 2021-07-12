@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-12 col-lg-6 offset-lg-3">
+    <div class="col-12 col-lg-8 offset-lg-2">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Crear usuarios</h4>
@@ -14,7 +14,7 @@
                         <input type="text" id="name" name="name" class="form-control form-control-line" value="" placeholder="Ingresar nombre"> </div>
                     <div class="form-group">
                         <label for="email">Apellido</label>
-                        <input type="text" id="email" name="lastName" class="form-control"> </div>
+                        <input type="text" id="lastName" name="lastName" class="form-control"> </div>
                     <div class="form-group">
                         <label>Edad</label>
                         <input type="number" id="age" name="age" min="18" max="99" class="form-control"> </div>

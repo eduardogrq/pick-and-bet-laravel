@@ -6,7 +6,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Tabla de usuarios</h4>
+                <h4 class="card-title">Tabla de Eventos</h4>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Forecast;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ForecastController extends Controller
 {
@@ -66,7 +68,17 @@ class ForecastController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $forecasts = new Forecast();
+        $forecasts->event_date = $request->get('event_date');
+        $forecasts->event_name = $request->get('event_name');
+        $forecasts->forecast = $request->get('forecast');
+        $forecasts->category = $request->get('category');
+        $forecasts->premium = $request->get('premium');
+
+        $forecasts->save();
+
+        return redirect()->route('forecasts.index');
+
     }
 
     /**

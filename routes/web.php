@@ -30,6 +30,8 @@ use App\Http\Controllers\UserController;
 
     Route::get('/forecasts-create', [ForecastController::class, 'create'])->name('forecasts.create');
 
+    Route::post('/forecasts-create', [ForecastController::class, 'store'])->name('forecasts.store');
+
 
 //END FORECASTS
 
