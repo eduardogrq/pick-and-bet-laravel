@@ -39,13 +39,21 @@
 
                                     </td>
 
-                                    <td>
-                                        <a href="#" class="mr-4">
+                                    <td class="d-flex">
+                                        <button class="btn btn-success mr-2">
                                             <i class="mdi mdi-pencil"></i>
-                                        </a>
-                                        <a href="#">
-                                            <i class="mdi mdi-delete"></i>
-                                        </a>
+                                        </button>
+                                        <form action="{{route('forecasts.delete', $forecast->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro que deseas eliminar este Evento?')">
+                                                <i class="mdi mdi-delete"></i>
+                                            </button>
+{{--                                            <a href="#" type="submit">--}}
+{{--                                                    <i class="mdi mdi-delete"></i>--}}
+{{--                                            </a>--}}
+                                        </form>
+
                                     </td>
                                 </tr>
 {{--                            @endif--}}

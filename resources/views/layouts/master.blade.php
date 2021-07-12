@@ -33,12 +33,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('freePicks')}}">Picks Gratuitos</a>
                     </li>
+                    @if(!Auth::user())
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('login')}}">Log in</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link platzi-text" href="{{route('register')}}">Regístrate</a>
                     </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link platzi-text" href="{{route('dashboard')}}">Hola {{Auth::user()->name}}</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

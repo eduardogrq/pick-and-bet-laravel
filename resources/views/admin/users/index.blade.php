@@ -31,13 +31,18 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->phoneNumber}}</td>
                                 <td><span class="label label-danger">admin</span> </td>
-                                <td>
-                                    <a href="#" class="mr-4">
+                                <td class="d-flex">
+                                    <button class="btn btn-success mr-2">
                                         <i class="mdi mdi-pencil"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="mdi mdi-delete"></i>
-                                    </a>
+                                    </button>
+                                    <form action="{{route('users.delete', $user->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro que deseas eliminar este usuario?');">
+                                            <i class="mdi mdi-delete"></i>
+                                        </button>
+                                    </form>
+
                                 </td>
                             </tr>
                             @endif

@@ -32,6 +32,8 @@ use App\Http\Controllers\UserController;
 
     Route::post('/forecasts-create', [ForecastController::class, 'store'])->name('forecasts.store');
 
+    Route::delete('/forecasts/{id}', [ForecastController::class, 'destroy'])->name('forecasts.delete');
+
 
 //END FORECASTS
 
@@ -42,6 +44,8 @@ use App\Http\Controllers\UserController;
     Route::get('/users-create', [UserController::class, 'create'])->name('users.create');
 
     Route::post('/users-create', [UserController::class, 'store'])->name('users.store');
+
+    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.delete');
 
 //END Users
 

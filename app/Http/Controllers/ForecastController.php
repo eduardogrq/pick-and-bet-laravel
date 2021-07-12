@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Forecast;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class ForecastController extends Controller
 {
 
     public function welcome(){
 
-        $forecasts = Forecast::all()->take(7);
+        $forecasts = Forecast::all()->where('premium', false)->take(7);
         return view('welcomePick')->with('forecasts', $forecasts);
     }
 
@@ -123,6 +121,8 @@ class ForecastController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $forecast = Forecast::find($id);
+        $forecast->delete();
+        return redirect()->route('forecasts.index');
     }
 }
