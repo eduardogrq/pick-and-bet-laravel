@@ -21,13 +21,10 @@
                     <div class="form-group">
                         <label>Categoría</label>
                         <select class="form-control" name="category" id="category" required>
-                            <option value="basketball">Basketball</option>
-                            <option value="soccer">Fútbol Soccer</option>
-                            <option value="americano">Fútbol Americano</option>
-                            <option value="box">Box</option>
-                            <option value="baseball">Baseball</option>
-                            <option value="tenis">Tenis</option>
-                            <option value="hockey">Hockey</option>
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+
                         </select>
                     </div>
                     <div class="form-group">

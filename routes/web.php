@@ -51,7 +51,8 @@ use App\Http\Controllers\UserController;
 
 // Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    $user = Auth::user();
+    return view('dashboard', compact('user'));
 })->name('dashboard');
 
 //Logout

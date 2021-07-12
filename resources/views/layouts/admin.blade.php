@@ -120,11 +120,11 @@
                                         <div class="u-img"><img src="./material-pro/assets/images/users/1.jpg" alt="user"></div>
                                         <div class="u-text">
                                             <h4>{{Auth::user()->name}}</h4>
-                                            <p class="text-muted" style="font-size: 0.5em;">{{Auth::user()->email}}</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Mi perfil</a></div>
+                                            <p class="text-muted" style="font-size: 0.5em;">{{Auth::user()->email}}</p><a href="{{route('dashboard')}}" class="btn btn-rounded btn-danger btn-sm">Mi perfil</a></div>
                                     </div>
                                 </li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="ti-user"></i> Mi perfil</a></li>
+                                <li><a href="{{route('dashboard')}}"><i class="ti-user"></i> Mi perfil</a></li>
                                 <li role="separator" class="divider"></li>
 {{--                                <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>--}}
 {{--                                <li role="separator" class="divider"></li>--}}
@@ -157,7 +157,7 @@
                 <div class="profile-img"> <img src="./material-pro/assets/images/users/profile.png" alt="user" /> </div>
                 <!-- User profile text-->
                 <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{Auth::user()->name . ' ' . Auth::user()->lastName}}</a>
-                    <div class="dropdown-menu animated flipInY"> <a href="#" class="dropdown-item"><i class="ti-user"></i> Mi perfil</a>
+                    <div class="dropdown-menu animated flipInY"> <a href="{{route('dashboard')}}" class="dropdown-item"><i class="ti-user"></i> Mi perfil</a>
                         <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
                         <div class="dropdown-divider"> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
                 </div>
@@ -167,7 +167,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">PERSONAL</li>
-                    <li> <a class="has-arrow " href="nada" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Mi perfil </span></a>
+                    <li> <a class="has-arrow " href="{{route('dashboard')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Mi perfil </span></a>
 
                     </li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Usuarios</span></a>

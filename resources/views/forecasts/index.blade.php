@@ -29,7 +29,7 @@
                                     <td>{{$forecast->event_date}}</td>
                                     <td>{{$forecast->event_name}}</td>
                                     <td>{{$forecast->forecast}}</td>
-                                    <td>{{$forecast->category}}</td>
+                                    <td>{{$forecast->category->name}}</td>
                                     <td>
                                         @if($forecast->premium == true)
                                             <span class="label label-warning">premium</span>

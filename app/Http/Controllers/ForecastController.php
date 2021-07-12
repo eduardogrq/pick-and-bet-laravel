@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Forecast;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -21,9 +22,8 @@ class ForecastController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function freePicks(){
-        $forecasts = Forecast::all()->where('premium', false);
-        $categories = Forecast::all()->get('category');
-        return view('forecasts.freePicks', compact('forecasts', 'categories'));
+        $categories = Category::all();
+        return view('forecasts.freePicks', compact('categories'));
     }
 
     /**
@@ -32,7 +32,8 @@ class ForecastController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function premiumPicks(){
-        return view('forecasts.premiumPicks');
+        $categories = Category::all();
+        return view('forecasts.premiumPicks', compact('categories'));
     }
 
     public function premiumRegister(){
@@ -57,7 +58,8 @@ class ForecastController extends Controller
      */
     public function create()
     {
-        return view('forecasts.create');
+        $categories = Category::all();
+        return view('forecasts.create', compact('categories'));
     }
 
     /**
@@ -72,7 +74,7 @@ class ForecastController extends Controller
         $forecasts->event_date = $request->get('event_date');
         $forecasts->event_name = $request->get('event_name');
         $forecasts->forecast = $request->get('forecast');
-        $forecasts->category = $request->get('category');
+        $forecasts->category_id = $request->get('category');
         $forecasts->premium = $request->get('premium');
 
         $forecasts->save();

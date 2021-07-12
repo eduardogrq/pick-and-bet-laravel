@@ -2,7 +2,27 @@
 @extends('layouts.admin')
 
 @section('content')
-
+    <!-- Column -->
+    <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="card">
+            <img class="card-img-top" src="../material-pro/assets/images/background/profile-header.jpg" alt="Card image cap">
+            <div class="card-body little-profile text-center">
+                <div class="pro-img"><img src="../material-pro/assets/images/users/user.jpg" alt="user" /></div>
+                <h3 class="m-b-0">{{$user->name . ' ' . Auth::user()->lastName}}</h3>
+                <p>{{Auth::user()->email}}</p>
+                <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
+                <div class="row text-center m-t-20">
+                    <div class="col-lg-4 col-md-4 m-t-20">
+                        <h3 class="m-b-0 font-light">{{$user->age}}</h3><small>Edad</small></div>
+                    <div class="col-lg-4 col-md-4 m-t-20">
+                        <h3 class="m-b-0 font-light">{{$user->phoneNumber}}</h3><small>Teléfono</small></div>
+                    <div class="col-lg-4 col-md-4 m-t-20">
+                        <h3 class="m-b-0 font-light">{{$user->id}}</h3><small>ID</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
 @endsection
 
 
