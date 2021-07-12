@@ -346,7 +346,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-small-cap">PERSONAL</li>
-                    <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Mi perfil </span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="index.html">Dashboard 1</a></li>
                             <li><a href="index2.html">Dashboard 2</a></li>
@@ -558,7 +558,7 @@
         <div class="sidebar-footer">
             <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
             <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-            <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+            <!-- item--><a href="{{route('logout')}}" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
         <!-- End Bottom points-->
     </aside>
     <!-- ============================================================== -->
@@ -718,13 +718,13 @@
 <!-- This page plugins -->
 <!-- ============================================================== -->
 <!-- chartist chart -->
-<script src="./material-pro/assets/plugins/chartist-js/dist/chartist.min.js"></script>
-<script src="./material-pro/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+{{--<script src="./material-pro/assets/plugins/chartist-js/dist/chartist.min.js"></script>--}}
+{{--<script src="./material-pro/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>--}}
 <!--c3 JavaScript -->
 <script src="./material-pro/assets/plugins/d3/d3.min.js"></script>
 <script src="./material-pro/assets/plugins/c3-master/c3.min.js"></script>
 <!-- Chart JS -->
-<script src="./material-pro/material/js/dashboard1.js"></script>
+{{--<script src="./material-pro/material/js/dashboard1.js"></script>--}}
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->

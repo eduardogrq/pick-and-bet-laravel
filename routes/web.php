@@ -16,10 +16,6 @@ use App\Http\Controllers\AdminController;
 
 //Forecasts
 
-    Route::get('/index', function (){
-        return view('admin.index');
-    });
-
     Route::get('/', [ForecastController::class, 'welcome'])->name('welcome');
 
     Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks')->middleware('auth');
