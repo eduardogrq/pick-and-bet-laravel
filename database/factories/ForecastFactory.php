@@ -25,8 +25,8 @@ class ForecastFactory extends Factory
             'event_name' => $this->faker->sentence(2),
             'event_date' => now(),
             'forecast' => $this->faker->word(),
-            'category' => $this->faker->word(),
             'premium' => $this->faker->boolean(),
+            'category_id' => $this->faker->numberBetween(1,2),
             'created_at' => now()
         ];
     }

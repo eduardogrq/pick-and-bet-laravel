@@ -14,14 +14,19 @@ class CreateForecastsTable extends Migration
     public function up()
     {
         Schema::create('forecasts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->id();
             $table->string('event_name');
             $table->date('event_date');
             $table->string('forecast');
-            $table->string('category');
             $table->boolean('premium');
+            $table->unsignedBigInteger('category_id')->nullable();
+
+            $table->foreign('category_id')->references('id')
+                ->on('categories')->onDelete('set null');
             $table->timestamps();
         });
+
     }
 
     /**

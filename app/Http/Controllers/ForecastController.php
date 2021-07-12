@@ -21,7 +21,9 @@ class ForecastController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function freePicks(){
-        return view('forecasts.freePicks');
+        $forecasts = Forecast::all()->where('premium', false);
+        $categories = Forecast::all()->get('category');
+        return view('forecasts.freePicks', compact('forecasts', 'categories'));
     }
 
     /**
