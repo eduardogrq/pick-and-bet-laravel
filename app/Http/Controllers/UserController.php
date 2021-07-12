@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Fortify\PasswordValidationRules;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserController extends Controller
 {
+    use PasswordValidationRules;
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +40,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $users = new User();
+        $users->name = $request->get('name');
+        $users->lastName = $request->get('lastName');
+        $users->age = $request->get('age');
+        $users->email = $request->get('email');
+        $users->phoneNumber = $request->get('phoneNumber');
+        $users->password = Hash::make($request->get('password'));
+
+        $users->save();
+
+        return redirect()->route('users.index');
+
     }
 
     /**
