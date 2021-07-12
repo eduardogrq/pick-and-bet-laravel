@@ -44,7 +44,8 @@ class ForecastController extends Controller
      */
     public function index()
     {
-        return view('forecasts.index');
+        $forecasts = Forecast::all();
+        return view('forecasts.index')->with('forecasts', $forecasts);
     }
 
     /**
