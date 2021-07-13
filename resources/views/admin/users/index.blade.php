@@ -32,10 +32,12 @@
                                 <td>{{$user->phoneNumber}}</td>
                                 <td><span class="label label-danger">admin</span> </td>
                                 <td class="d-flex">
-                                    <button class="btn btn-success mr-2">
-                                        <i class="mdi mdi-pencil"></i>
-                                    </button>
-                                    <form action="{{route('users.delete', $user->id)}}" method="POST">
+                                    <a href="{{route('users.edit', $user->id)}}">
+                                        <button class="btn btn-success mr-2">
+                                            <i class="mdi mdi-pencil"></i>
+                                        </button>
+                                    </a>
+                                    <form action="{{route('users.destroy', $user->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro que deseas eliminar este usuario?');">

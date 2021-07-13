@@ -48,7 +48,7 @@ class ForecastController extends Controller
     public function index()
     {
         $forecasts = Forecast::all();
-        return view('forecasts.index')->with('forecasts', $forecasts);
+        return view('admin.forecasts.index')->with('forecasts', $forecasts);
     }
 
     /**
@@ -59,7 +59,7 @@ class ForecastController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('forecasts.create', compact('categories'));
+        return view('admin.forecasts.create', compact('categories'));
     }
 
     /**
@@ -102,7 +102,9 @@ class ForecastController extends Controller
      */
     public function edit($id)
     {
-        //
+        $forecast = Forecast::find($id);
+        $categories = Category::all();
+        return view('admin.forecasts.edit', compact('forecast', 'categories'));
     }
 
     /**
@@ -114,7 +116,18 @@ class ForecastController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $forecast = Forecast::find($id);
+
+        $forecast->event_date = $request->get('event_date');
+        $forecast->event_name = $request->get('event_name');
+        $forecast->forecast = $request->get('forecast');
+        $forecast->category_id = $request->get('category');
+        $forecast->premium = $request->get('premium');
+
+        $forecast->save();
+
+        return redirect()->route('forecasts.index');
+
     }
 
     /**

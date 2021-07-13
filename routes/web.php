@@ -26,26 +26,16 @@ use App\Http\Controllers\UserController;
 
     Route::get('/premium-picks', [ForecastController::class, 'premiumPicks'])->name('premiumPicks')->middleware('auth');
 
-    Route::get('/forecasts', [ForecastController::class, 'index'])->name('forecasts.index');
-
-    Route::get('/forecasts-create', [ForecastController::class, 'create'])->name('forecasts.create');
-
-    Route::post('/forecasts-create', [ForecastController::class, 'store'])->name('forecasts.store');
-
-    Route::delete('/forecasts/{id}', [ForecastController::class, 'destroy'])->name('forecasts.delete');
+    //    CRUD
+    Route::resource('forecasts', ForecastController::class);
+    //    END CRUD
 
 
 //END FORECASTS
 
 //Users
 
-    Route::get('/users', [UserController::class, 'index'])->name('users.index');
-
-    Route::get('/users-create', [UserController::class, 'create'])->name('users.create');
-
-    Route::post('/users-create', [UserController::class, 'store'])->name('users.store');
-
-    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.delete');
+    Route::resource('/users', UserController::class);
 
 //END Users
 
