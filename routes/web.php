@@ -24,7 +24,7 @@ use App\Http\Controllers\UserController;
 
     Route::get('/', [ForecastController::class, 'welcome'])->name('welcome');
 
-    Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks')->middleware('auth');
+    Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks');
 
     //    Middlewares de roles para premium
     Route::group(['middleware' => 'role:premium|admin'], function () {

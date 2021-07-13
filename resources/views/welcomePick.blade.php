@@ -87,9 +87,15 @@
                         <h2>Obtén Acceso Ilimitado a Nuestros <span>Picks Premium</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div class="container-btn">
-                            <a href="">
-                                <button class="btn btn-primary">Acceder</button>
-                            </a>
+                            @if(Auth::user())
+                                <a class="nav-link" href="{{route('premiumPicks')}}">
+                                    <button class="btn btn-primary">Acceder</button>
+                                </a>
+                            @else
+                                <a class="nav-link" href="{{route('premiumRegister')}}">
+                                    <button class="btn btn-primary">Acceder</button>
+                                </a>
+                            @endif
                         </div>
                     </div>
                     <div class="col-12 col-md-5">
