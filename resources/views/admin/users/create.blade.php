@@ -11,22 +11,33 @@
                     @csrf
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" id="name" name="name" class="form-control form-control-line" value="" placeholder="Ingresar nombre"> </div>
+                        <input type="text" id="name" name="name" class="form-control form-control-line" value="" placeholder="Ingresar nombre" required> </div>
                     <div class="form-group">
                         <label for="email">Apellido</label>
-                        <input type="text" id="lastName" name="lastName" class="form-control"> </div>
+                        <input type="text" id="lastName" name="lastName" class="form-control" required> </div>
                     <div class="form-group">
                         <label>Edad</label>
-                        <input type="number" id="age" name="age" min="18" max="99" class="form-control"> </div>
+                        <input type="number" id="age" name="age" min="18" max="99" class="form-control" required> </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Ej: eduardo@smartbis.com.mx"> </div>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Ej: eduardo@smartbis.com.mx" required> </div>
                     <div class="form-group">
                         <label>Teléfono</label>
-                        <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Ej: 5556738475" maxlength="13"> </div>
+                        <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Ej: 5556738475" maxlength="13" required> </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="******"> </div>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="******" required> </div>
+{{--                    Roles--}}
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select class="form-control" name="role" id="role" required>
+                            <option value="">-</option>
+                            @foreach($roles as $role)
+                                <option value="{{$role->name}}">{{$role->name}}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
 
                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Crear</button>
 

@@ -28,7 +28,13 @@
                         <a class="nav-link" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('premiumPicks')}}">Premium Picks</a>
+                        @if(Auth::user())
+                            <a class="nav-link" href="{{route('premiumPicks')}}">Premium Picks</a>
+                        @else
+                            <a class="nav-link" href="{{route('premiumRegister')}}">Premium Picks</a>
+                        @endif
+
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('freePicks')}}">Picks Gratuitos</a>

@@ -30,7 +30,14 @@
                                 <td>{{$user->lastName}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->phoneNumber}}</td>
-                                <td><span class="label label-danger">admin</span> </td>
+                                <td>@foreach($roles as $role)
+                                        @if($user->hasRole($role))
+                                        <span class="label label-danger">
+                                            {{$role->name}}
+                                        </span>
+                                        @endif
+                                    @endforeach
+                                </td>
                                 <td class="d-flex">
                                     <a href="{{route('users.edit', $user->id)}}">
                                         <button class="btn btn-success mr-2">

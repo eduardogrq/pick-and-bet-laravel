@@ -10,7 +10,15 @@
                 <div class="pro-img"><img src="../material-pro/assets/images/users/user.jpg" alt="user" /></div>
                 <h3 class="m-b-0">{{$user->name . ' ' . Auth::user()->lastName}}</h3>
                 <p>{{Auth::user()->email}}</p>
-                <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
+                @if(Auth::user()->hasRole('premium') || Auth::user()->hasRole('admin') )
+                    <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-warning btn-md btn-rounded">
+                        Premium
+                    </a>
+                @else
+                    <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-success btn-md btn-rounded">
+                        Free
+                    </a>
+                @endif
                 <div class="row text-center m-t-20">
                     <div class="col-lg-4 col-md-4 m-t-20">
                         <h3 class="m-b-0 font-light">{{$user->age}}</h3><small>Edad</small></div>

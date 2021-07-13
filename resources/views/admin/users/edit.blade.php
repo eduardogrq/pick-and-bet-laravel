@@ -6,8 +6,8 @@
     <div class="col-12 col-lg-8 offset-lg-2">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Crear usuarios</h4>
-                <h6 class="card-subtitle">Agregar <code>usuarios</code> a la base de datos Pick and Bet.</h6>
+                <h4 class="card-title">Editar usuarios</h4>
+                <h6 class="card-subtitle">Editar <code>usuarios</code> a la base de datos Pick and Bet.</h6>
                 <form class="form-material m-t-40" action="{{route('users.update', $user->id)}}" method="POST">
                     @csrf
                     @method('PUT')
@@ -26,6 +26,33 @@
                     <div class="form-group">
                         <label>Teléfono</label>
                         <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" value="{{$user->phoneNumber}}" maxlength="13"> </div>
+                    <div class="form-group">
+                        <label>Agregar Rol</label>
+                        <select class="form-control" name="role" id="role">
+                            <option value="">-</option>
+{{--                            listar los roles que aún no tiene--}}
+                            @foreach($roles as $role)
+                                @if(!$user->hasRole($role->name))
+                                    <option value="{{$role->name}}">{{$role->name}}</option>
+                                @endif
+                            @endforeach
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Eliminar Rol</label>
+                        <select class="form-control" name="removeRole" id="removeRole">
+                            <option value="">-</option>
+{{--                            listar los roles que ya tiene para removerlos--}}
+                            @foreach($roles as $role)
+                                @if($user->hasRole($role->name))
+                                <option value="{{$role->name}}">{{$role->name}}</option>
+
+                                @endif
+                            @endforeach
+
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label>Contraseña</label>
                         <input type="password" id="password" name="password" class="form-control" placeholder="******"> </div>

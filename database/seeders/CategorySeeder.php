@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Category;
 
 class CategorySeeder extends Seeder
 {
@@ -13,9 +14,10 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-//            'id' => 1,
-            'name' => Str::random(2),
-        ]);
+        Category::factory(2)->create();
+//        DB::table('categories')->insert([
+////            'id' => 1,
+//            'name' => Str::random(2),
+//        ]);
     }
 }

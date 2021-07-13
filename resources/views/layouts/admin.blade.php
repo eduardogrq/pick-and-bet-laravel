@@ -112,12 +112,12 @@
                     <!-- Profile -->
                     <!-- ============================================================== -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./material-pro/assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./material-pro/assets/images/users/user.jpg" alt="user" class="profile-pic" /></a>
                         <div class="dropdown-menu dropdown-menu-right scale-up">
                             <ul class="dropdown-user">
                                 <li>
                                     <div class="dw-user-box">
-                                        <div class="u-img"><img src="./material-pro/assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-img"><img src="./material-pro/assets/images/users/user.jpg" alt="user"></div>
                                         <div class="u-text">
                                             <h4>{{Auth::user()->name}}</h4>
                                             <p class="text-muted" style="font-size: 0.5em;">{{Auth::user()->email}}</p><a href="{{route('dashboard')}}" class="btn btn-rounded btn-danger btn-sm">Mi perfil</a></div>
@@ -154,7 +154,7 @@
             <!-- User profile -->
             <div class="user-profile" style="background: url(./material-pro/assets/images/background/user-info.jpg) no-repeat;">
                 <!-- User profile image -->
-                <div class="profile-img"> <img src="./material-pro/assets/images/users/profile.png" alt="user" /> </div>
+                <div class="profile-img"> <img src="./material-pro/assets/images/users/user.jpg" alt="user" /> </div>
                 <!-- User profile text-->
                 <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{Auth::user()->name . ' ' . Auth::user()->lastName}}</a>
                     <div class="dropdown-menu animated flipInY"> <a href="{{route('dashboard')}}" class="dropdown-item"><i class="ti-user"></i> Mi perfil</a>
@@ -170,6 +170,18 @@
                     <li> <a class="has-arrow " href="{{route('dashboard')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Mi perfil </span></a>
 
                     </li>
+
+                    @if(!Auth::user()->hasRole('admin'))
+                        <li> <a class="has-arrow " href="{{route('premiumPicks')}}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Premium Picks</span></a>
+
+                        </li>
+                        <li> <a class="has-arrow " href="{{route('freePicks')}}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Free Picks</span></a>
+
+                        </li>
+
+                    @endif
+
+                    @role('admin')
                     <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Usuarios</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('users.index')}}">Todos</a></li>
@@ -177,12 +189,17 @@
 
                         </ul>
                     </li>
+
                     <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Forecasts</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('forecasts.index')}}">Todos</a></li>
                             <li><a href="{{route('forecasts.create')}}">Crear</a></li>
 
                         </ul>
+                    </li>
+                    @endrole
+                    <li> <a class="has-arrow " href="{{route('welcome')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Inicio</span></a>
+
                     </li>
 
 

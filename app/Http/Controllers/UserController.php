@@ -6,6 +6,7 @@ use App\Actions\Fortify\PasswordValidationRules;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 
 class UserController extends Controller
@@ -19,7 +20,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('admin.users.index')->with('users', $users);
+        $roles = Role::all();
+        return view('admin.users.index', compact('roles', 'users'));
     }
 
     /**
@@ -29,7 +31,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $roles = Role::all();
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
@@ -74,7 +77,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('admin.users.edit', compact('user'));
+        $roles = Role::all();
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -101,6 +105,13 @@ class UserController extends Controller
 
 
         $user->save();
+        if ($request->get('role')){
+            $user->assignRole($request->get('role'));
+        }
+
+        if ($request->get('removeRole')){
+            $user->removeRole($request->get('removeRole'));
+        }
 
         return redirect()->route('users.index');
     }

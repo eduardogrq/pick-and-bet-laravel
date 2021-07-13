@@ -16,26 +16,28 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
+
 //Forecasts
+
+    Route::resource('forecasts', ForecastController::class)->middleware('role:admin');
 
     Route::get('/', [ForecastController::class, 'welcome'])->name('welcome');
 
     Route::get('/free-picks', [ForecastController::class, 'freePicks'])->name('freePicks')->middleware('auth');
 
+    //    Middlewares de roles para premium
+    Route::group(['middleware' => 'role:premium|admin'], function () {
+        Route::get('/premium-picks', [ForecastController::class, 'premiumPicks'])->name('premiumPicks')->middleware('auth');
+    });
+
     Route::get('/premium-register', [ForecastController::class, 'premiumRegister'])->name('premiumRegister');
-
-    Route::get('/premium-picks', [ForecastController::class, 'premiumPicks'])->name('premiumPicks')->middleware('auth');
-
-    //    CRUD
-    Route::resource('forecasts', ForecastController::class);
-    //    END CRUD
-
 
 //END FORECASTS
 
 //Users
 
-    Route::resource('/users', UserController::class);
+    Route::resource('/users', UserController::class)->middleware('role:admin');
 
 //END Users
 
