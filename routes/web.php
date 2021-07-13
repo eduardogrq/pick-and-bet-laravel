@@ -33,13 +33,13 @@ use App\Http\Controllers\UserController;
 
     Route::get('/premium-register', [ForecastController::class, 'premiumRegister'])->name('premiumRegister');
 
-//END FORECASTS
+//END Forecasts *********************************
 
 //Users
 
     Route::resource('/users', UserController::class)->middleware('role:admin');
 
-//END Users
+//END Users *********************************
 
 // Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

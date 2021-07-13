@@ -32,12 +32,14 @@
                             <tbody>
 
                             @foreach($category->forecast as $forecast)
+
                                 @if(!$forecast->premium)
                                 <tr>
                                     <td class="bg-claro">{{$forecast->event_date}}</td>
                                     <td>{{$forecast->event_name}}</td>
                                     <td class="bg-claro">{{$forecast->forecast}}</td>
                                 </tr>
+
                                 @endif
                             @endforeach
 

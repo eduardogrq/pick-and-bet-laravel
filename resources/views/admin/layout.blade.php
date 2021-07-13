@@ -170,6 +170,18 @@
                         <li> <a class="has-arrow " href="{{route('dashboard')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Mi perfil </span></a>
 
                         </li>
+
+                        @if(!Auth::user()->hasRole('admin'))
+                            <li> <a class="has-arrow " href="{{route('premiumPicks')}}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Premium Picks</span></a>
+
+                            </li>
+                            <li> <a class="has-arrow " href="{{route('freePicks')}}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Free Picks</span></a>
+
+                            </li>
+
+                        @endif
+
+                        @role('admin')
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('users.index')}}">Todos</a></li>
@@ -177,6 +189,7 @@
 
                             </ul>
                         </li>
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">Forecasts</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('forecasts.index')}}">Todos</a></li>
@@ -184,7 +197,10 @@
 
                             </ul>
                         </li>
+                        @endrole
+                        <li> <a class="has-arrow " href="{{route('welcome')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Inicio</span></a>
 
+                        </li>
 
                     </ul>
                 </nav>

@@ -22,8 +22,7 @@
                         </thead>
                         <tbody>
                         @foreach($users as $user)
-{{--                            Condicional para no poner mi propio usuario--}}
-                            @if($user->id !== Auth::user()->id)
+
                             <tr>
                                 <td>{{$user->id}}</td>
                                 <td>{{$user->name}}</td>
@@ -44,6 +43,10 @@
                                             <i class="mdi mdi-pencil"></i>
                                         </button>
                                     </a>
+                                    @if(Auth::user()->id == $user->id)
+
+                                    @else
+
                                     <form action="{{route('users.destroy', $user->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
@@ -51,10 +54,10 @@
                                             <i class="mdi mdi-delete"></i>
                                         </button>
                                     </form>
+                                    @endif
 
                                 </td>
                             </tr>
-                            @endif
                         @endforeach
                         </tbody>
                     </table>

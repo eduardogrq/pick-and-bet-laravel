@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+//use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,8 +17,9 @@ class DatabaseSeeder extends Seeder
 //        \App\Models\User::factory(10)->create();
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(CategorySeeder::class);
 
-        \App\Models\Category::factory(2)->create();
+//        \App\Models\Category::factory(2)->create();
 
     }
 }
