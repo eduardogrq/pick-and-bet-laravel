@@ -16,8 +16,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-
-
 //Forecasts
 
     Route::resource('forecasts', ForecastController::class)->middleware('role:admin');
