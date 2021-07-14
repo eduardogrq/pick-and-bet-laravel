@@ -188,7 +188,7 @@
                         </ul>
                     </li>
                     @endrole
-                    <li> <a class="has-arrow " href="{{route('welcome')}}" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Inicio</span></a>
+                    <li> <a class="has-arrow " href="{{route('welcome')}}" aria-expanded="false"><i class="mdi mdi-home"></i><span class="hide-menu">Inicio</span></a>
 
                     </li>
 
