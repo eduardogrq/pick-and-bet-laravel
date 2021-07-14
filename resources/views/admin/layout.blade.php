@@ -53,19 +53,8 @@
             <!-- ============================================================== -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{route('welcome')}}">
-                    <!-- Logo icon --><b>
-                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                        <!-- Dark Logo icon -->
-                        <img src="./../../material-pro/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                        <!-- Light Logo icon -->
-                        <img src="./../../material-pro/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                    </b>
-                    <!--End Logo icon -->
-                    <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                         <img src="./../../material-pro/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                        <!-- Light Logo text -->
-                         <img src="./../../material-pro/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                    <span style="color: white; font-weight: bolder">PICK & BET</span>
+                </a>
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -157,9 +146,9 @@
                 <div class="profile-img"> <img src="./../../material-pro/assets/images/users/user.jpg" alt="user" /> </div>
                 <!-- User profile text-->
                 <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{Auth::user()->name . ' ' . Auth::user()->lastName}}</a>
-                    <div class="dropdown-menu animated flipInY"> <a href="{{route('dashboard')}}" class="dropdown-item"><i class="ti-user"></i> Mi perfil</a>
-                        {{--                        <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>--}}
-                        <div class="dropdown-divider"> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
+                    <div class="dropdown-menu animated flipInY">
+                        <a href="{{route('dashboard')}}" class="dropdown-item"><i class="ti-user"></i> Mi perfil</a>
+                        <a href="{{route('logout')}}" class="dropdown-item"><i class="ti-power-off"></i> Cerrar sesión</a>
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -277,30 +266,30 @@
             <!-- Right sidebar -->
             <!-- ============================================================== -->
             <!-- .right-sidebar -->
-            <div class="right-sidebar">
-                <div class="slimscrollright">
-                    <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-                    <div class="r-panel-body">
-                        <ul id="themecolors" class="m-t-20">
-                            <li><b>With Light sidebar</b></li>
-                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
-                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
-                            <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
-                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>
-                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
-                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
-                            <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
-                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
-                            <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
-                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
-                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
-                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a></li>
-                        </ul>
+{{--            <div class="right-sidebar">--}}
+{{--                <div class="slimscrollright">--}}
+{{--                    <div class="rpanel-title"> Panel de servicio <span><i class="ti-close right-side-toggle"></i></span> </div>--}}
+{{--                    <div class="r-panel-body">--}}
+{{--                        <ul id="themecolors" class="m-t-20">--}}
+{{--                            <li><b>Con Light sidebar</b></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>--}}
+{{--                            <li class="d-block m-t-30"><b>Con Dark sidebar</b></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>--}}
+{{--                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a></li>--}}
+{{--                        </ul>--}}
 
-                    </div>
-                </div>
-            </div>
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!-- ============================================================== -->
             <!-- End Right sidebar -->
             <!-- ============================================================== -->
@@ -311,7 +300,7 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
-        <footer class="footer"> © 2021 <a  href="https://smartbis.com.mx/">Smartbis</a> </footer>
+        <footer class="footer"> © 2021 <a target="_blank" href="https://smartbis.com.mx/">Smartbis</a> </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
         <!-- ============================================================== -->
