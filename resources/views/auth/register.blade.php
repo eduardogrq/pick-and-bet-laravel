@@ -1,52 +1,87 @@
 
-@extends('layouts.master')
+@extends('auth.login-layout')
+
+@section('title')
+    Registro
+@endsection
 
 @section('content')
 
-    <div class="contenedor-login">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 col-12">
+    <div class="container-login100" style="background-image: url('../../Login_v3/images/bg-02.jpg');">
+        <div class="wrap-login100">
 
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Nombre" name="name" :value="old('name')" required autofocus autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Apellido</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellido" :value="old('lastName')" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Edad</label>
-                            <input type="number" min="18" max="100" class="form-control" name="age" id="edad" placeholder="Edad" :value="old('age')" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Correo</label>
-                            <input type="email" class="form-control" id="email" placeholder="Correo" name="email" :value="old('email')" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Teléfono</label>
-                            <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Teléfono a 10 dígitos">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Contraseña" name="password" required autocomplete="new-password">
-                        </div>
-                        <div class="form-group">
-                            <label for="password_confirmation">Confirmar contraseña</label>
-                            <input type="password" class="form-control" id="password_confirmation" placeholder="Confirmar contraseña" name="password_confirmation" required autocomplete="new-password">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Regístrarme</button>
-                    </form>
-
-                    <div class="contenedor-registrar-link">
-                        <a href="{{route('login')}}">¿Ya tienes cuenta? Inicia sesión aquí.</a>
-                    </div>
+            @if (session('status'))
+                <div class="mb-4 font-medium text-sm text-green-600">
+                    {{ session('status') }}
                 </div>
-            </div>
+            @endif
+
+            <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+                @csrf
+
+                <span class="login100-form-title p-b-34 p-t-27">
+                    Registro
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate = "Nombre">
+                    <input class="input100" placeholder="Nombre" name="name" :value="old('name')" required autocomplete="name">
+{{--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Apellido">
+                    <input class="input100" placeholder="Apellido" name="lastName" :value="old('lastName')" required autocomplete="lastName">
+{{--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Edad">
+                    <input type="number" class="input100" placeholder="Edad" name="age" :value="old('age')" required autocomplete="age">
+{{--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Email">
+                    <input type="email" class="input100" placeholder="Email" name="email" :value="old('email')" required autocomplete="email">
+{{--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Teléfono">
+                    <input type="number" class="input100" placeholder="Teléfono" name="phoneNumber" :value="old('phoneNumber')" required autocomplete="phoneNumber">
+{{--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Ingresar contraseña">
+                    <input class="input100" id="password" placeholder="Contraseña" type="password" name="password" required autocomplete="new-password">
+{{--                    <span class="focus-input100" data-placeholder="&#xf191;"></span>--}}
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Confirmar contraseña">
+                    <input class="input100" id="password" placeholder="Confirmar contraseña" type="password" name="password_confirmation" required autocomplete="password_confirmation">
+                    {{--                    <span class="focus-input100" data-placeholder="&#xf191;"></span>--}}
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button type="submit" class="login100-form-btn">
+                        Regístrate
+                    </button>
+                </div>
+
+                <div class="text-center p-t-10">
+                    <small class="text-light">¿Ya tienes una cuenta?</small><br>
+                    <a class="txt1" href="{{route('login')}}">
+                        Ingresa aquí
+                    </a>
+                </div>
+            </form>
+
+                <div class="container-login100-form-btn pt-5">
+                    <a href="{{route('welcome')}}">
+                        <button class="login100-form-btn">
+                            <i class="fas fa-home mr-1"></i> <small>Home</small>
+
+                        </button>
+                    </a>
+
+                </div>
+
         </div>
     </div>
 

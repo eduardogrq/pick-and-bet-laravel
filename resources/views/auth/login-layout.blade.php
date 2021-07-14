@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../Login_v3/vendor/select2/select2.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="../../Login_v3/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="../../Login_v3/css/util.css">
     <link rel="stylesheet" type="text/css" href="../../Login_v3/css/main.css">
