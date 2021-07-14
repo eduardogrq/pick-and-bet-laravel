@@ -1,5 +1,9 @@
 @extends('admin.layout')
 
+@section('title')
+    Crear Usuarios
+@endsection
+
 @section('content')
 
     <div class="col-12 col-lg-8 offset-lg-2">

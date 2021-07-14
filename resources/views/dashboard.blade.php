@@ -1,6 +1,10 @@
 
 @extends('layouts.admin')
 
+@section('title')
+    Mi perfil
+@endsection
+
 @section('content')
     <!-- Column -->
     <div class="col-12 col-lg-10 offset-lg-1">

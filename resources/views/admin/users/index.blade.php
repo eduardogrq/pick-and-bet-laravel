@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Usuarios
+@endsection
+
 @section('content')
 
     <!-- column -->

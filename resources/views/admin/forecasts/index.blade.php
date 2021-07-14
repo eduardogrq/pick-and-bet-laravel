@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Pronósticos
+@endsection
+
 @section('content')
 
     <!-- column -->
