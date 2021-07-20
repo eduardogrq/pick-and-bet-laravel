@@ -86,7 +86,7 @@
 
 .picks-gratuitos .img-container-pricks-gratuitos {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
 }
 
 .picks-gratuitos .img-container-pricks-gratuitos .contenedor-img:first-child {
