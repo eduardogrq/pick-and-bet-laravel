@@ -12,7 +12,7 @@ class ForecastController extends Controller
 
     public function welcome(){
 
-        $forecasts = Forecast::all()->where('premium', false)->take(7);
+        $forecasts = Forecast::all()->where('premium', false)->take(4);
         return view('welcomePick')->with('forecasts', $forecasts);
     }
 

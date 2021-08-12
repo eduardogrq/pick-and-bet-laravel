@@ -15,7 +15,9 @@
                     <div class="col">
                         <div class="overlay-container-content">
                             <h1>Con Nosotros <br> ¡Apuesta y Gana!</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Pick & Bet te ofrece los mejores pronósticos para mejorar los resultados en tus Apuestas Deportivas,
+                                <br> diseñadas por expertos en cada mercado. Con nuestras referencias, convertirás tus perdidas en ganancias.
+                                <br> Aprende a jugar con los Bookies (Casas de Apuestas), perfecciona tus apuestas en línea!</p>
                             <div class="overlay-btn">
                                 <a href="{{route('freePicks')}}"><button class="btn btn-primary">Ver Nuestros Picks</button></a>
                             </div>
@@ -56,9 +58,9 @@
 {{--                            // Printing forecasts--}}
                             @foreach($forecasts as $forecast)
                                 <tr>
-                                    <td>{{$forecast->event_date}}</td>
-                                    <td>{{$forecast->event_name}}</td>
-                                    <td>{{$forecast->forecast}}</td>
+                                    <td class="bg-claro">{{$forecast->event_date}}</td>
+                                    <td class="bg-claro">{{$forecast->event_name}}</td>
+                                    <td class="bg-claro">{{$forecast->forecast}}</td>
                                 </tr>
 
 
@@ -85,7 +87,7 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-12 col-md-7">
                         <h2>Obtén Acceso Ilimitado a Nuestros <span>Picks Premium</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <p>Accede a la mejor asesoría por cada deporte: fútbol soccer, béisbol, fútbol americano, básquetbol, MMA… cada uno a un precio muy accesible; o contrata el Servicio Premium (todos los deportes) a una cuota increíble. Pick & Bet el mejor Tipster Online</p>
                         <div class="container-btn">
                             @if(Auth::user())
                                 <a class="nav-link" href="{{route('premiumPicks')}}">

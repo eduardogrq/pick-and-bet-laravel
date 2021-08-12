@@ -17,22 +17,22 @@ class CategorySeeder extends Seeder
 //        Category::factory(2)->create();
 
         Category::create([
-            'name' => 'box',
+            'name' => 'UFC/ Box',
         ]);
         Category::create([
-            'name' => 'basketball',
+            'name' => 'Basketball',
         ]);
         Category::create([
-            'name' => 'americano',
+            'name' => 'Fútbol Americano',
         ]);
         Category::create([
-            'name' => 'soccer',
+            'name' => 'Fútbol Soccer',
         ]);
         Category::create([
-            'name' => 'tenis',
+            'name' => 'Tenis',
         ]);
         Category::create([
-            'name' => 'baseball',
+            'name' => 'Béisbol',
         ]);
 
     }
