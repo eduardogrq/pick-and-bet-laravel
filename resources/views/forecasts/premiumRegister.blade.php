@@ -12,7 +12,10 @@
             </div>
         </div>
     </div>
+
+{{--    Paso 1--}}
     <div class="container-paso-impar">
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 d-flex justify-content-center">
@@ -21,7 +24,28 @@
                             <p>1</p>
                         </div>
                         <div class="descripcion-p">
-                            <p>Envíanos un WhatsApp al 55 1234 1234 solicitando tu registro</p>
+                            <p>¡Activa tu membresía de acceso y comienza a ganar con nosotros!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{{--    Paso 2--}}
+    <div class="container-paso-impar par">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="descripcion">
+                        <div class="numero">
+                            <p>2</p>
+                        </div>
+                        <div class="descripcion-p">
+                            <p>Envíanos un WhatsApp</p>
                         </div>
                     </div>
                 </div>
@@ -32,28 +56,10 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <div class="container-paso-impar par">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <div class="descripcion">
-                        <div class="numero">
-                            <p>2</p>
-                        </div>
-                        <div class="descripcion-p">
-                            <p>¡Recibe tus credenciales de acceso y comienza a ganar con nosotros!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <div class="img-pagos">
-                        <img src="./img/pago-paypal.png" alt="Opciones de pago">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+{{--    Paso 3--}}
     <div class="container-paso-impar">
         <div class="container">
             <div class="row">
@@ -63,15 +69,15 @@
                             <p>3</p>
                         </div>
                         <div class="descripcion-p">
-                            <p>¡Recibe tus credenciales de acceso y comienza a ganar con nosotros!</p>
+                            <p>Realiza tu pago directamente vía PayPal</p>
                         </div>
                     </div>
                 </div>
-{{--                <div class="col-12 col-md-6 d-flex justify-content-center">--}}
-{{--                    <div class="img-registro mt-3">--}}
-{{--                        <img src="./img/" alt="">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="img-pagos">
+                        <img src="./img/pago-paypal.png" alt="Opciones de pago">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
