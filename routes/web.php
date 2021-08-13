@@ -40,10 +40,7 @@ use App\Http\Controllers\UserController;
 //END Users *********************************
 
 // Dashboard
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $user = Auth::user();
-    return view('dashboard', compact('user'));
-})->name('dashboard');
+Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 //Logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

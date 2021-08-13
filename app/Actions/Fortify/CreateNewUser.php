@@ -24,13 +24,13 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'lastName' => ['required', 'string', 'max:255'],
             'age' => ['required', 'numeric', 'min:18'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['unique:users'],
             'phoneNumber' => ['required', 'numeric'],
-            'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
+//            'password' => $this->passwordRules(),
+//            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
-        return User::create([
+        return $user = User::create([
             'name' => $input['name'],
             'lastName' => $input['lastName'],
             'age' => $input['age'],
@@ -38,6 +38,8 @@ class CreateNewUser implements CreatesNewUsers
             'phoneNumber' => $input['phoneNumber'],
             'password' => Hash::make($input['password']),
         ]);
+
+        dd($user);
 
         return redirect()->route('dashboard');
     }

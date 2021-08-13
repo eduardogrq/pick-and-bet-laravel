@@ -56,6 +56,8 @@ class UserController extends Controller
 
         $users->assignRole($request->get('role'));
 
+        dd($users);
+
         return redirect()->route('users.index');
 
     }
