@@ -102,6 +102,7 @@
                             <p class="smartbis">Desarrollado por <a href="https://smartbis.com.mx/" style="text-decoration: none" target="_blank">Smartbis</a></p>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
         </footer>

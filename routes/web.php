@@ -31,7 +31,7 @@ use App\Http\Controllers\UserController;
 
     Route::get('/premium-register', [ForecastController::class, 'premiumRegister'])->name('premiumRegister');
 
-//END Forecasts *********************************
+//END Forecasts ****************************** ***
 
 //Users
 

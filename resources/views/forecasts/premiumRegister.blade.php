@@ -14,10 +14,8 @@
     </div>
 
 {{--    Paso 1--}}
-    <div class="container-paso-impar">
+    <div class="container-paso-impar d-flex justify-content-center mt-1 mb-1">
 
-        <div class="container">
-            <div class="row">
                 <div class="col-12 col-md-6 d-flex justify-content-center">
                     <div class="descripcion">
                         <div class="numero">
@@ -28,9 +26,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
 
     </div>
 
