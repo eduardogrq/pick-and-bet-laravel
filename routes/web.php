@@ -40,7 +40,7 @@ use App\Http\Controllers\UserController;
 //END Users *********************************
 
 // Dashboard
-Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
 //Logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
