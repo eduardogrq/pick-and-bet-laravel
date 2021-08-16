@@ -5,6 +5,7 @@ use App\Http\Controllers\ForecastController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +45,5 @@ Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard'
 
 //Logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+//Route::post('/registerUser', [UserController::class, 'registerUser'])->name('registerUser');

@@ -87,7 +87,7 @@
                             <a href="{{route('freePicks')}}">Free Picks</a>
                             <a href="{{route('login')}}">Log in</a>
                             <a href="{{route('register')}}">Regístrate</a>
-                            <a href="#">Aviso de Seguridad</a>
+                            <a href="#">Aviso de Privacidad</a>
                         </div>
                     </div>
                 </div>
