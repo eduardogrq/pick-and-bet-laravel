@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="../../Login_v3/images/icons/favicon.ico"/>
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="../../Login_v3/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->

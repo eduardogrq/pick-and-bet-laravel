@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./../../material-pro/assets/images/favicon.png">
+    <link rel="shortcut icon" href="./../../img/favicon.ico" />
     <title>Pick & Bet - @yield('title')</title>
     <!-- Bootstrap Core CSS -->
     <link href="./../../material-pro/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
