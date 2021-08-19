@@ -17,19 +17,19 @@
                     @method('PUT')
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" id="name" name="name" class="form-control form-control-line" value="{{$user->name}}"> </div>
+                        <input type="text" id="name" name="name" class="form-control form-control-line" value="{{$user->name}}" required> </div>
                     <div class="form-group">
                         <label for="email">Apellido</label>
-                        <input type="text" id="lastName" name="lastName" class="form-control" value="{{$user->lastName}}"> </div>
+                        <input type="text" id="lastName" name="lastName" class="form-control" value="{{$user->lastName}}" required> </div>
                     <div class="form-group">
                         <label>Edad</label>
-                        <input type="number" id="age" name="age" min="18" max="99" class="form-control" value="{{$user->age}}"> </div>
+                        <input type="number" id="age" name="age" min="18" max="99" class="form-control" value="{{$user->age}}" required> </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" id="email" name="email" class="form-control" value="{{$user->email}}"> </div>
+                        <input type="email" id="email" name="email" class="form-control" value="{{$user->email}}" required> </div>
                     <div class="form-group">
                         <label>Teléfono</label>
-                        <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" value="{{$user->phoneNumber}}" maxlength="13"> </div>
+                        <input type="number" id="phoneNumber" name="phoneNumber" class="form-control" value="{{$user->phoneNumber}}" maxlength="13" required> </div>
                     <div class="form-group">
                         <label>Agregar Rol</label>
                         <select class="form-control" name="role" id="role">

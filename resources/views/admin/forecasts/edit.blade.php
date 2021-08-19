@@ -15,16 +15,16 @@
                     @method('PUT')
                     <div class="form-group">
                         <label>Evento</label>
-                        <input type="text" id="event_name" name="event_name" class="form-control form-control-line" value="{{$forecast->event_name}}"> </div>
+                        <input type="text" id="event_name" name="event_name" class="form-control form-control-line" value="{{$forecast->event_name}}" required> </div>
                     <div class="form-group">
                         <label for="email">Fecha del evento</label>
-                        <input type="date" id="event_date" name="event_date" class="form-control" value="{{$forecast->event_date}}"> </div>
+                        <input type="date" id="event_date" name="event_date" class="form-control" value="{{$forecast->event_date}}" required> </div>
                     <div class="form-group">
                         <label>Pronóstico</label>
-                        <input type="text" id="forecast" name="forecast" class="form-control" value="{{$forecast->forecast}}"> </div>
+                        <input type="text" id="forecast" name="forecast" class="form-control" value="{{$forecast->forecast}}" required> </div>
                     <div class="form-group">
                         <label>Categoría</label>
-                        <select class="form-control" name="category" id="category" value="{{$forecast->category}}">
+                        <select class="form-control" name="category" id="category" value="{{$forecast->category}}" required>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tipo</label>
-                        <select class="form-control" name="premium" id="premium" value="{{$forecast->premium}}">
+                        <select class="form-control" name="premium" id="premium" value="{{$forecast->premium}}" required>
                             <option value="0">Free</option>
                             <option value="1">Premium</option>
                         </select>
